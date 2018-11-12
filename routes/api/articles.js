@@ -81,7 +81,7 @@ router.post('/:article_id', uploadDir.single('file_data'), function(req, res, ne
 			}
 			return res.json({
 				success: true,
-				message: 'Article Content Add successfully finished.'.
+				message: 'Article Content Add successfully finished.',
 				content_id: content.id
 			});
 		});
