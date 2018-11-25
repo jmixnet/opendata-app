@@ -28,7 +28,7 @@ sequelize db:migrate
 
 sequelize db:seed:all
 
-node start
+node bin/www
 ```
 
 ブラウザにて下記URLを起動
