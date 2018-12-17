@@ -10,6 +10,7 @@ var logger = require('morgan');
 var models = require("./models");
 
 var indexRouter = require('./routes/index');
+var registerRouter = require('./routes/register');
 var tagsRouter = require('./routes/tags');
 var positionsRouter = require('./routes/positions');
 var articlesRouter = require('./routes/articles');
@@ -33,6 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/register', registerRouter);
 app.use('/tags', tagsRouter);
 app.use('/positions', positionsRouter);
 app.use('/articles', articlesRouter);

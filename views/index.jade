@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(id='map')
+  script(rel='stylesheet', src='/javascripts/index.js')
+  script(type='text/javascript').
+    var marker = L.marker([37.109592, 138.256757]).addTo(mymap);
