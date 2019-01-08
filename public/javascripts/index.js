@@ -6,3 +6,10 @@ L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
 }).addTo(mymap);
 
 mymap.setView([37.109592, 138.256757], 15);
+
+$.getJSON("/positions" , function(data) {
+  var len = data.length;
+  for(var i = 0; i < len; i++) {
+    L.marker([data[i].lat, data[i].lng]).addTo(mymap);
+  }
+});
