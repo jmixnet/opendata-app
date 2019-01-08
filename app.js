@@ -87,7 +87,7 @@ apiRoutes.use( function( req, res, next ){
 });
 
 apiRoutes.use('/', apiRouter);
-apiRoutes.use('/articles', apiArticleRouter);
+apiRoutes.use('/article', apiArticleRouter);
 
 app.use( '/api', apiRoutes );
 
